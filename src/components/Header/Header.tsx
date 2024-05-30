@@ -1,14 +1,12 @@
 import { Container } from './styles'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
 // import Resume from '../../assets/Vinayak_Kumar_Singh_Resume.pdf'
-import Resume from '../../assets/Harekrishna_CV.pdf'
-
 
 export function Header() {
 
-  let resume_link="1MCXpeuRx2looRj9rmmVbx0RluPqFzl9t";
+  let resume_link = "1MCXpeuRx2looRj9rmmVbx0RluPqFzl9t";
 
   const [isActive, setActive] = useState(false)
 
@@ -55,16 +53,15 @@ export function Header() {
           </NavHashLink>
 
           <a
-          // href="https://drive.google.com/file/d/1MCXpeuRx2looRj9rmmVbx0RluPqFzl9t/view?usp=sharing"
-          href={`https://drive.google.com/file/d/${resume_link}/view?usp=sharing`}
-          target="_blank"
-          className="button"
-        >Resume</a>
+            // href="https://drive.google.com/file/d/1MCXpeuRx2looRj9rmmVbx0RluPqFzl9t/view?usp=sharing"
+            href={`https://drive.google.com/file/d/${resume_link}/view?usp=sharing`}
+            target="_blank"
+            className="button"
+          >Resume</a>
 
           {/* <a href={Resume} download className="button">
             Resume
           </a> */}
-
         </nav>
         <div
           aria-expanded={isActive ? 'true' : 'false'}
@@ -75,6 +72,7 @@ export function Header() {
             setActive(!isActive)
           }}
         ></div>
+
       </Router>
     </Container>
   )
